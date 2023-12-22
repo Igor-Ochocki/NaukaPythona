@@ -5,7 +5,7 @@
 results = []
 # wczytujemy wiersze, pomijamy komentarz
 with open("dane.dat", "r") as f:
-    lines = f.readlines()[4:]
+    lines = f.readlines()[3:]
 # wydobywamy dane z wczytanych ciągów znaków
 for line in lines:
     # dzielimy wiersz na pola

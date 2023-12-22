@@ -1,5 +1,5 @@
 # stwórz kalkulator działający w odwróconej notacji polskiej (operacje * / + -)
-# kalkulator przyjmuje input w postaci 2 2 / 3 + -> wynikiem jest 2 / 2 + 3
+# kalkulator przyjmuje input w postaci 2 2 / 3 + 2 / 2 * -> wynikiem jest ((2 / 2 + 3) / 2) * 2
 # nie uwzględniamy nawiasów,
 
 # bonus : zabezpiecz się przed dzieleniem przez 0
