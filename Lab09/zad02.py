@@ -20,3 +20,35 @@
 #15. slugging_pct (slugging percentage): Procent zagrywki, czyli stosunek liczby punktów zdobytych dzięki podwójnym, potrójnym i home runom do liczby podeść do odbicia.
 #16. stolen_bases: Ilość skradzionych baz przez zawodnika.
 #17. caught_stealing: Ilość sytuacji, gdy zawodnik został zatrzymany podczas próby skradzenia bazy przez przeciwnika.
+
+
+with open("baseball.txt", "r") as dane:
+    dane.readline()
+    lines = dane.readlines()
+    top_runs = []
+    top_run = 0
+    top_runs_per_games = []
+    top_run_per_games = 0
+    for line in lines:
+        line = line.strip()
+        data = line.split(" ")
+        final_data = []
+        for i in data:
+            if i != "":
+                final_data.append(i)
+        if final_data[3] == "OAK":
+            print(f"{final_data[0]} {final_data[1]} {final_data[2]}")
+
+        if int(final_data[6]) > top_run:
+            top_run = int(final_data[6])
+            top_runs = [f"{final_data[0]} {final_data[1]} {final_data[2]}"]
+        elif int(final_data[6]) == top_run:
+            top_runs.append(f"{final_data[0]} {final_data[1]} {final_data[2]}")
+
+        if float(final_data[6]) / int(final_data[4]) > top_run_per_games:
+            top_run_per_games = float(final_data[6]) / float(final_data[4])
+            top_runs_per_games = [f"{final_data[0]} {final_data[1]} {final_data[2]}"]
+        elif float(final_data[6]) / int(final_data[4]) == top_run_per_games:
+            top_runs_per_games.append(f"{final_data[0]} {final_data[1]} {final_data[2]}")
+    print(top_runs)
+    print(top_runs_per_games)

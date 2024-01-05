@@ -27,10 +27,9 @@ Pharma X,Montelukast,10'''
 
 file_path = r'c:\temp\data_input\orders.csv'
 
-with open(file_path, "r") as file:
+with open(file_path, "r", newline="") as file:
     for line in file:
 
-        line = line.replace('\n', '')
         order = line.split(',')
 
         if len(order) == 3:
