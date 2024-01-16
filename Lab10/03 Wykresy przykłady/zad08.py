@@ -17,6 +17,6 @@ ax.plot_surface(x, y, z, cmap='viridis')
 ax.set_xlabel('Oś X')
 ax.set_ylabel('Oś Y')
 ax.set_zlabel('Oś Z')
-ax.set_title('Wykres 3D funkcji sin(sqrt(x^2 + y^2))')
+ax.set_title('Wykres 3D funkcji z = sin(sqrt(x^2 + y^2))')
 plt.show()
 

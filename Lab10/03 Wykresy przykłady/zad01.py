@@ -7,7 +7,7 @@ import numpy as np
 x = np.linspace(-10, 10, 100)
 y = 2 * x + 5
 
-plt.plot(x, y)
+plt.plot(x,y)
 plt.xlabel('x')
 plt.ylabel('y')
 plt.grid()

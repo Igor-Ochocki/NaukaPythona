@@ -6,7 +6,7 @@ import numpy as np
 
 np.random.seed(42)
 data = np.random.randn(100)
-
+print(data)
 plt.hist(data, bins=20, color='green', alpha=0.7)
 plt.xlabel('Wartości')
 plt.ylabel('Częstość')

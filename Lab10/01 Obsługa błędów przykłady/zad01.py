@@ -1,19 +1,18 @@
 # Obsługa wyjątków try/except
 
 # brak obsługi wyjątków
-num = float(input("Wprowadź liczbę: "))
 print('------------------------------')
 
 # obsługa wyjątków
 try:
-    num = float(input("Wprowadź liczbę: "))
+    num = 5 / 0
 except:
     print("Wystąpił jakiś błąd!")
 print('------------------------------')
 
 # obsługa konkretnego wyjątku
 try:
-    num = float(input("Wprowadź liczbę: "))
+    num = 5 / 0
 except ValueError:
     print("Podana zmienna nie jest liczbą !")
 print('KONIEC SKRYPTU')
